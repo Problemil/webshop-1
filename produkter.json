@@ -1,43 +1,57 @@
 [
     {
         "id": 1,
-        "prodName": "Epiphone Les Paul Standard",
-        "prodDesc": "Elgitarr med kropp av mahogny och AAA-flammigt lönntopp, mahognyhals med greppbräda av rosewood och två ProBucker pickups.",
-        "prodPrice": 6999,
+        "prodName": "They'll come they come",
+        "prodDesc": "First album 2004.",
+        "image": "tctc.jpg",
+        "prodPrice": 250,
         "huvudKat": 1,
         "underKat": 1
     },
     {
         "id": 2,
-        "prodName": "Epiphone Les Paul Standard",
-        "prodDesc": "Elgitarr med kropp av mahogny och AAA-flammigt lönntopp, mahognyhals med greppbräda av rosewood och två ProBucker pickups.",
-        "prodPrice": 6999,
+        "prodName": "Moen",
+        "prodDesc": "Second album, 2009",
+        "image": "moen.jpg",
+        "prodPrice": 250,
         "huvudKat": 1,
         "underKat": 1
     },
     {
         "id": 3,
-        "prodName": "Epiphone Les Paul Standard",
-        "prodDesc": "Elgitarr med kropp av mahogny och AAA-flammigt lönntopp, mahognyhals med greppbräda av rosewood och två ProBucker pickups.",
-        "prodPrice": 6999,
+        "prodName": "In Passage",
+        "prodDesc": "Third album, 2012",
+        "image": "inpassage.jpg",
+        "prodPrice": 250,
         "huvudKat": 1,
         "underKat": 1
     },
     {
         "id": 4,
-        "prodName": "Epiphone Les Paul Standard",
-        "prodDesc": "Elgitarr med kropp av mahogny och AAA-flammigt lönntopp, mahognyhals med greppbräda av rosewood och två ProBucker pickups.",
-        "prodPrice": 6999,
+        "prodName": "Hibernation",
+        "prodDesc": "Fourth album 2016",
+        "image": "hibernation.jpg",
+        "prodPrice": 250,
         "huvudKat": 1,
         "underKat": 1
     },
     {
         "id": 5,
-        "prodName": "Epiphone Les Paul Standard",
-        "prodDesc": "Elgitarr med kropp av mahogny och AAA-flammigt lönntopp, mahognyhals med greppbräda av rosewood och två ProBucker pickups.",
-        "prodPrice": 6999,
+        "prodName": "Tote bag Black",
+        "prodDesc": "100% Cotton ",
+        "image": "toteblk.jpg",
+        "prodPrice": 180,
         "huvudKat": 1,
-        "underKat": 1
+        "underKat": 2
+    },
+    {
+        "id": 5,
+        "prodName": "Tote bag Off-White",
+        "prodDesc": "100% Cotton ",
+        "image": "totewt.jpg",
+        "prodPrice": 180,
+        "huvudKat": 1,
+        "underKat": 2
     }
 
 ]
