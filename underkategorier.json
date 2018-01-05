@@ -1,13 +1,13 @@
 [
     {
         "id": 1,
-        "stadname": "Vinyls",
+        "item": "Vinyls",
         "huvudkategori": 1
         
     },
     {
         "id": 2,
-        "stadname": "Cloths",
-        "huvudkategori": 2
+        "item": "Clothes",
+        "huvudkategori": 1
     }
 ]
