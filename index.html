@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
+       
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
         crossorigin="anonymous">
-    <link href="style.css" rel="stylesheet">
-    <script src="https://use.fontawesome.com/86ad615387.js"></script>
+        
+        
+        <link href="style.css" rel="stylesheet">
+        
+        <script src="https://use.fontawesome.com/86ad615387.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>Webshop</title>
 </head>
 
 <body>
+    
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
         <a class="navbar-brand" id="start" href="index.html">Immanu El Shop</a>
@@ -36,7 +42,7 @@
             <li class="nav-right">
                 <div id="form">
                     <input type="text" value="username" class="user">
-                    <input type="text" value="password" class="password">
+                    <input type="password" value="password" class="password">
                     <button class="loginButton">Login</button>
                     <button class="logoutButton">Logout</button>
                 </div>
@@ -44,39 +50,45 @@
 
             <li class="nav-item">
                 <a class="nav-link" href="#">
-                    <i class="fa fa-shopping-cart cart" aria-hidden="true"></i>
                 </a>
             </li>
+            <a href="kassa.html"><i class="fa fa-shopping-cart cart"  aria-hidden="true"></i></a>
         </div>
     </nav>
 
     <div class="jumbotron">
-        <div class="container">
-            <h1 class="display-3">Welcome</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit doloremque officiis magni, quod natus veritatis
-                praesentium omnis sequi placeat modi harum cum laudantium optio porro inventore enim? Ipsam ut ullam ducimus
-                aspernatur perferendis, blanditiis eveniet nulla. Quam est quisquam quaerat?</p>
+        <h1 class="display-3">Welcome</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit doloremque officiis magni, quod natus veritatis praesentium
+            omnis sequi placeat modi harum cum laudantium optio porro inventore enim? Ipsam ut ullam ducimus aspernatur perferendis,
+            blanditiis eveniet nulla. Quam est quisquam quaerat?</p>
+    </div>
+
+    <div class="container">
+      
+        <div class="contactPage"></div>
+        <div id="info"></div>
+        <div class="content">
+                <div class="text">Välkommern till Immanu El Shop.
+                Här kan du handla Vinylskivor, T-shirts och Totebags</div>
+
+            <div class="row" id="allProducts">
+                <!-- produkter -->
+            </div>
+            
 
         </div>
     </div>
 
-    <div class="content">
 
-        <div class="row" id="allProducts">
-            <!-- produkter -->
-        </div>
-    </div>
-    <div class="contactPage"></div>
-
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
-        crossorigin="anonymous"></script>
-    <script src="scripts.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+crossorigin="anonymous"></script>
+<script src="scripts.js"></script>
 </body>
 
 </html>

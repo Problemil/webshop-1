@@ -45,13 +45,49 @@
         "underKat": 2
     },
     {
-        "id": 5,
+        "id": 6,
         "prodName": "Tote bag Off-White",
         "prodDesc": "100% Cotton ",
         "image": "totewt.jpg",
         "prodPrice": 180,
         "huvudKat": 1,
         "underKat": 2
+    },
+    {
+        "id": 7,
+        "prodName": "Cloud-T (Off-white)",
+        "prodDesc": "100% cotton",
+        "image": "cloud-blk.jpg",
+        "prodPrice": 250,
+        "huvudKat": 1,
+        "underKat": 3
+    },
+    {
+        "id": 8,
+        "prodName": "Cloud-T (off-white)",
+        "prodDesc": "100% Cotton",
+        "image": "cloud-nat.jpg",
+        "prodPrice": 250,
+        "huvudKat": 1,
+        "underKat": 3
+    },
+    {
+        "id": 9,
+        "prodName": "T-shirt Immanu El (Black)",
+        "prodDesc": "100% Cotton",
+        "image": "hib-blk.jpg",
+        "prodPrice": 250,
+        "huvudKat": 1,
+        "underKat": 3
+    },
+    {
+        "id": 10,
+        "prodName": "T-shirt Immanu El (Biege)",
+        "prodDesc": "100% Cotton",
+        "image": "hib-wt.jpg",
+        "prodPrice": 250,
+        "huvudKat": 1,
+        "underKat": 3
     }
 
 ]

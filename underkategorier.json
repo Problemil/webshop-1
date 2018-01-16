@@ -7,7 +7,12 @@
     },
     {
         "id": 2,
-        "item": "Clothes",
+        "item": "Tote-bags",
+        "huvudkategori": 1
+    },
+    {
+        "id": 3,
+        "item": "T-shirts",
         "huvudkategori": 1
     }
 ]
