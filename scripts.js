@@ -1,13 +1,14 @@
 var huvudKat = "";
 var produkter = "";
 var underKat = "";
+var user = "admin";
+var password = "admin";
+
 var addProduct
 var deleteProduct
-var user = "admin"
-var password = "admin"
+var showInfo
 
 $(document).ready(function () {
-   
 
     if (sessionStorage.ourUser == null) {
         // Är vi inte inloggade
@@ -19,24 +20,24 @@ $(document).ready(function () {
         visaSomInloggad();
     }
 
-            //syns vid start utloggad
-            function visaFirstVisit() {
-                $(".loginButton").show();     
-                $(".logoutButton").hide(); 
-                $(".namn").hide(); 
-                $(".user").show();
-                $(".password").show();
-        
-            };
-        
-            //syns på start när man är inloggad
-            function visaSomInloggad() {
-                $(".loginButton").hide();     
-                $(".logoutButton").show(); 
-                $(".user").hide();
-                $(".password").hide();
-                              
-            };
+    //syns vid start utloggad
+    function visaFirstVisit() {
+        $(".loginButton").show();
+        $(".logoutButton").hide();
+        $(".namn").hide();
+        $(".user").show();
+        $(".password").show();
+
+    };
+
+    //syns på start när man är inloggad
+    function visaSomInloggad() {
+        $(".loginButton").hide();
+        $(".logoutButton").show();
+        $(".user").hide();
+        $(".password").hide();
+
+    };
 
     var setProductList = [];
 
@@ -46,6 +47,8 @@ $(document).ready(function () {
 
         console.log("tom storage skapad");
     }
+
+    //KASSAN
 
     var parseProductList = JSON.parse(sessionStorage.productList);
 
@@ -69,6 +72,7 @@ $(document).ready(function () {
 
         $(".printKassa").append(produktCard);
     }
+
     $(".totalAmount").append(totalAmount + fraktAmount + ":- " + "inkl frakt");
 
     addProduct = function (val) {
@@ -85,6 +89,8 @@ $(document).ready(function () {
 
     deleteProduct = function (index) {
         var parseProductList = JSON.parse(sessionStorage.productList);
+
+        // var shoppingCart = JSON.parse(sessionStorage.shoppingCart);
 
         parseProductList.splice(index, 1);
 
@@ -103,7 +109,6 @@ $(document).ready(function () {
             var produktUK = parseProductList[i].underKat;
             var produktCard = '<div class="col-sm-4"><div class="card"><img class="card-img-top" src="' + produktImage + '"><div class="card-body"><h4 class="card-title">' + produktName + '</h4><p class="card-text">' + produktDesc + '</p><p>Pris: ' + produktPrice + '</p><a href="#" class="btn btn-primary" onclick="deleteProduct(' + i + ')">Ta bort</a></div></div></div>';
 
-
             $(".printKassa").append(produktCard);
         }
     }
@@ -113,7 +118,22 @@ $(document).ready(function () {
         location.reload();
     }
 
-    //Huvudkategori
+
+    finishOrder = function() {
+
+        if (sessionStorage.ourUser == null) {
+            
+            alert("Du måste logga in först!")
+
+        } else {
+           
+            $(".container").html("Tack för din order :)");
+
+        }
+    }
+
+    //HUVUDKATEGORI
+
     fetch("huvudkategorier.json")
         .then(function (response) {
             return response.json();
@@ -164,7 +184,8 @@ $(document).ready(function () {
             };
         });
 
-    //Produkter
+    //PRODUKTER
+    
     fetch("produkter.json")
         .then(function (response) {
             return response.json();
@@ -191,11 +212,10 @@ $(document).ready(function () {
                     var produktUK = produkter[i].underKat;
 
                     produktCard = '<div class="col-sm-4"><div class="card"><img class="card-img-top" src="' + produktImage + '"><div class="card-body"><h5 class="card-title"><br/>' + produktName + '</h5><p class="card-text">' + produktDesc + '</p><p>Pris: ' + produktPrice + '</p><a class="btn btn-primary" onclick="addProduct(' + i + ')">Köp nu</a></div></div></div>';
-                    
-                    console.log
 
                     if (!uk || uk === produktUK) {
                         produktCardList.push(produktCard);
+
                     }
                 };
 
@@ -203,7 +223,7 @@ $(document).ready(function () {
             });
 
         });
-        
+
     $("#contact").click(function () {
         $(".content").hide();
         $(".contactPage").show();
@@ -222,17 +242,18 @@ $(document).ready(function () {
         $(".text").hide();
     });
 
-      //Loggan
-      $('#logga').click(function() {
+    //Loggan
+    $('#logga').click(function () {
         console.log("du är på start");
         location.reload();
     });
 
     //Login-knappen
-    $(".loginButton").click(function(){
-    
-        if ( $(".user").val() == user && $(".password").val() == password ) {
+    $(".loginButton").click(function () {
+
+        if ($(".user").val() == user && $(".password").val() == password) {
             alert("välkommen!");
+            sessionStorage.setItem("ourUser", $(".user").val());
             visaSomInloggad();
 
         } else {
@@ -242,15 +263,15 @@ $(document).ready(function () {
     });
 
     //Logout-knappen
-    $(".logoutButton").click(function(){
+    $(".logoutButton").click(function () {
         console.log("du är utloggad");
         sessionStorage.clear()
-        location.reload();      
+        location.reload();
         visaFirstVisit();
     });
 
     //Kundvagn
-    $('#shoppingCart').click(function() {
+    $('#shoppingCart').click(function () {
         console.log("Nu hamna vi i kundvagnen :)");
         //$(".container").html("");
     });
